@@ -18,9 +18,6 @@ This repository provides all required materials to conduct a hands-on **Embedded
 
 ## 📁 Repository Structure
 
-
-```
-
 .
 ├── Broker Setup
 │   ├── configured\_files/
@@ -42,8 +39,6 @@ This repository provides all required materials to conduct a hands-on **Embedded
 │
 ├── LICENSE
 └── README.md
-
-```
 
 ---
 
