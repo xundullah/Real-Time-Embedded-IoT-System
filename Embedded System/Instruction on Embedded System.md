@@ -40,7 +40,7 @@ Install the following libraries via the **Library Manager** (Ctrl + Shift + I):
 
 Make sure your **FireBeetle 2 ESP32-E** is properly connected via USB.
 
-<img src="Screenshots\Board_Port.png" alt="Board Selection" width="300">
+<img src="Screenshots\Board_Port.png" alt="Board Selection" width="600">
 
 - **Board**: FireBeetle 2 ESP32-E  
 - **Port**: COM port as detected (e.g., `COM4`)
