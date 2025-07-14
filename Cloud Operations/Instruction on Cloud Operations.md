@@ -324,3 +324,53 @@ To organize widgets visually, assign each widget to a **Group** under a **Tab** 
 > ```
 
 This dashboard will now live-update with real-time sensor values streamed from the ESP32 via MQTT!
+
+
+
+
+## 💡 Remote LED Control Using Node-RED
+
+You can remotely turn an LED **ON/OFF** on your ESP32 board by publishing MQTT messages to the `Tutor.LED` topic from a **dashboard switch** in Node-RED.
+
+---
+
+### 🕹️ 1. LED Switch Node Configuration
+
+- **Widget**: `ui_switch`
+- **Group**: `[Workshop] Remote Switching`
+- **Label**: `LED Switch`
+- **On Payload**: `On`
+- **Off Payload**: `Off`
+- **Topic**: `msg.Tutor.LED` *(will be passed to mqtt out)*
+
+<img src="Screenshots/LED_SW.png" alt="LED Dashboard Switch Configuration" width="500">
+
+---
+
+### 📤 2. MQTT Out Node Configuration
+
+- **Node**: `mqtt out`
+- **Server**: `Mosquitto`
+- **Topic**: `Tutor.LED`
+- **QoS**: `0`
+- **Retain**: `false`
+- **Name**: `Tutor.LED`
+
+This node publishes the message from the switch to the topic that ESP32 is subscribed to.
+
+<img src="Screenshots/MQTT_out_LED.png" alt="MQTT Out Node for LED Control" width="500">
+
+---
+
+> ✅ When the switch is toggled:
+> - `On` → Sends `"On"` to `Tutor.LED` → ESP32 turns **LED ON**
+> - `Off` → Sends `"Off"` to `Tutor.LED` → ESP32 turns **LED OFF**
+
+Ensure the ESP32 is correctly subscribed to the topic and reacts to the `"On"` and `"Off"` messages accordingly.
+
+---
+
+You now have a complete real-time control and monitoring system using:
+- MQTT (Mosquitto)
+- ESP32 + DHT22
+- Node-RED dashboard
