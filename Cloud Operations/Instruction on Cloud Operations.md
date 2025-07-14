@@ -112,9 +112,9 @@ Set up your MQTT Broker using the following settings:
 
 #### 📡 MQTT Broker Connection Settings
 
-<img src="Screenshots/Broker_Connection.png" alt="MQTT Broker Config in Node-RED - Connection Tab" width="300">
+<img src="Screenshots/Broker_Connection.png" alt="MQTT Broker Config in Node-RED - Connection Tab" width="600">
 
 #### 🔒 MQTT Broker Security Settings
 
-<img src="Screenshots/Broker_Security.png" alt="MQTT Broker Config in Node-RED - Security Tab" width="300">
+<img src="Screenshots/Broker_Security.png" alt="MQTT Broker Config in Node-RED - Security Tab" width="600">
 
