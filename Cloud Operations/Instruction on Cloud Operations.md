@@ -173,3 +173,71 @@ These nodes allow you to create interactive web-based dashboards from your Node-
 #### 📷 Dashboard Palette Installation View
 
 <img src="Screenshots/Dashboard_Palette.png" alt="Install Node-RED Dashboard Palette" width="600">
+
+
+
+
+---
+Here is the next `README.md` section describing the use of **Function nodes** to filter and extract individual fields—**timestamp (DT)**, **temperature (T)**, and **humidity (H)**—from the incoming MQTT JSON payload using Node-RED. Each function block has a corresponding screenshot (`Fn_DT.png`, `Fn_T.png`, `Fn_H.png`).
+
+---
+
+
+### 🧮 Extracting Sensor Values with Function Nodes
+
+When the MQTT `Tutor.DHT` topic sends data in JSON format such as:
+
+```json
+{
+  "DT": "2025-07-15 10:42:31",
+  "T": 28.54,
+  "H": 65.32
+}
+````
+
+We can isolate each property using **Function nodes** in Node-RED. This enables further routing, display, or processing of **individual values**.
+
+
+#### 🕒 Filter Timestamp (DT)
+
+Use the following function to extract the `DT` value:
+
+```javascript
+msg.payload = msg.payload.DT;
+return msg;
+```
+
+<img src="Screenshots/Fn_DT.png" alt="Function Node - Filter DT" width="500">
+
+
+
+#### 🌡️ Filter Temperature (T)
+
+Use the following function to extract the `T` value:
+
+```javascript
+msg.payload = msg.payload.T;
+return msg;
+```
+
+<img src="Screenshots/Fn_T.png" alt="Function Node - Filter Temperature" width="500">
+
+
+
+#### 💧 Filter Humidity (H)
+
+Use the following function to extract the `H` value:
+
+```javascript
+msg.payload = msg.payload.H;
+return msg;
+```
+
+<img src="Screenshots/Fn_H.png" alt="Function Node - Filter Humidity" width="500">
+
+
+
+> ✅ You can now connect each of these function nodes to separate **UI elements** (e.g., `ui_text`, `ui_gauge`, or `ui_chart`) in your Node-RED dashboard for real-time visualization.
+
+
+---
