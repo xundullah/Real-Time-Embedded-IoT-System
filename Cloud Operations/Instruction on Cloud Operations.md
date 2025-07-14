@@ -148,4 +148,4 @@ This node will **subscribe** to the topic published by the ESP32 device using th
 
 #### 📷 MQTT In Node Configuration
 
-<img src="Screenshots/MQTT_in_DHT.png" alt="MQTT In Node - DHT22 Sensor" width="450">
+<img src="Screenshots/MQTT_in_DHT.png" alt="MQTT In Node - DHT22 Sensor" width="600">
