@@ -18,9 +18,12 @@ This repository provides all required materials to conduct a hands-on **Embedded
 
 ## 📁 Repository Structure
 
+
+```
+
 .
 ├── Broker Setup
-│   ├── configured_files/
+│   ├── configured\_files/
 │   ├── Instruction on Broker Setup.md
 │   └── mosquitto-2.0.22-install-windows.exe
 │
@@ -30,16 +33,17 @@ This repository provides all required materials to conduct a hands-on **Embedded
 │   └── node-v22.17.0-x64.msi
 │
 ├── Embedded System
-│   ├── 1__LED_On_or_Off/
-│   ├── 2__DHT22_Room_Temp_n_Hum/
-│   ├── 3__WiFi_n_NTP_Timestamp/
-│   ├── 4__Realtime_Monitoring_n_Control/
+│   ├── 1__LED_On_or_Off
+│   ├── 2__DHT22_Room_Temp_n_Hum
+│   ├── 3__WiFi_n_NTP_Timestamp
+│   ├── 4__Realtime_Monitoring_n_Control
 │   ├── Screenshots/
 │   └── Instruction on Embedded System.md
 │
 ├── LICENSE
 └── README.md
 
+```
 
 ---
 
