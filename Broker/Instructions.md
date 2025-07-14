@@ -1,88 +1,101 @@
-🧭 Eclipse Mosquitto Broker Setup (Windows 64-bit)
-🔹 About Mosquitto
-Eclipse Mosquitto is an open-source MQTT message broker that supports versions 5.0, 3.1.1, and 3.1 of the protocol. It’s lightweight and ideal for Internet of Things (IoT) communication on systems ranging from embedded devices to full servers.
+## 🧭 Eclipse Mosquitto Broker Setup (Windows 64-bit)
 
-It uses the publish/subscribe model, making it highly efficient for real-time data transfer in sensor networks, mobile devices, and embedded systems.
+### 🔹 About Mosquitto
+Eclipse Mosquitto is an open-source MQTT message broker that supports versions **5.0**, **3.1.1**, and **3.1** of the protocol. It’s lightweight and ideal for Internet of Things (IoT) communication on systems ranging from embedded devices to full servers.
 
-✅ Step-by-Step Installation and Setup
-🔽 1. Download Mosquitto Installer
+It uses the **publish/subscribe** model, making it highly efficient for real-time data transfer in sensor networks, mobile devices, and embedded systems.
+
+---
+
+### ✅ Step-by-Step Installation and Setup
+
+#### 🔽 1. Download Mosquitto Installer
 Download the latest stable Windows 64-bit installer:
 
-🔗 mosquitto-2.0.22-install-windows-x64.exe
+🔗 [mosquitto-2.0.22-install-windows-x64.exe](https://mosquitto.org/files/binary/win64/mosquitto-2.0.22-install-windows-x64.exe)
 
-💾 2. Install Mosquitto
-Run the .exe installer.
+---
+
+#### 💾 2. Install Mosquitto
+Run the `.exe` installer.
 
 During installation, make sure to select:
+- ✅ **Install service**
+- ✅ **Add PATH variable** (optional but helpful)
 
-✅ Install service
+---
 
-✅ Add PATH variable (optional but helpful)
+#### 🔐 3. Create MQTT Password File
+Open **Command Prompt as Administrator** and run the following:
 
-🔐 3. Create MQTT Password File
-Open Command Prompt as Administrator and run the following:
-
-bash
-Copy code
+```bash
 cd "C:\Program Files\mosquitto"
 mosquitto_passwd -c passwd.txt mqttuser
-Replace mqttuser with your preferred username.
+````
 
-You will be prompted to enter and confirm the password.
+* Replace `mqttuser` with your preferred username.
+* You will be prompted to enter and confirm the password.
 
-📁 This will create a password file named passwd.txt in the Mosquitto directory.
+📁 This will create a password file named `passwd.txt` in the Mosquitto directory.
 
-🛡️ 4. Create Secure Mosquitto Config File
-Inside the same folder (C:\Program Files\mosquitto), create a file named:
+---
 
-secure_mosquitto.conf
+#### 🛡️ 4. Create Secure Mosquitto Config File
+
+Inside the same folder (`C:\Program Files\mosquitto`), create a file named:
+
+`secure_mosquitto.conf`
 
 With the following content:
 
-conf
-Copy code
+```conf
 listener 1883
 allow_anonymous false
 password_file passwd.txt
+```
+
 💡 This ensures only authenticated clients can connect.
 
-🔁 5. Restart Mosquitto with New Config
+---
+
+#### 🔁 5. Restart Mosquitto with New Config
+
 If Mosquitto is already running, stop it first:
 
-bash
-Copy code
+```bash
 taskkill /F /IM mosquitto.exe
+```
+
 Then start Mosquitto with the secure config:
 
-bash
-Copy code
+```bash
 mosquitto -v -c secure_mosquitto.conf
-🟢 You should now see Listening on port 1883 and password authentication enabled.
+```
 
-🔓 6. Allow MQTT Port in Firewall (1883)
-To allow external clients to connect, open port 1883 for TCP in both inbound and outbound rules:
+🟢 You should now see `Listening on port 1883` and password authentication enabled.
 
-Open Windows Defender Firewall → Advanced Settings
+---
 
-Go to Inbound Rules → New Rule
+#### 🔓 6. Allow MQTT Port in Firewall (1883)
 
-Rule Type: Port
+To allow external clients to connect, open port **1883** for **TCP** in both inbound and outbound rules:
 
-Protocol: TCP
+* Open **Windows Defender Firewall → Advanced Settings**
+* Go to **Inbound Rules → New Rule**
 
-Port: 1883
+  * Rule Type: **Port**
+  * Protocol: **TCP**
+  * Port: **1883**
+  * **Allow** the connection
+* Repeat for **Outbound Rules**
 
-Allow the connection
+---
 
-Repeat for Outbound Rules
+### 🎉 You're Done!
 
-🎉 You're Done!
-Your secure MQTT broker is now ready. Clients like ESP32, Node-RED, or mosquitto_sub/pub can connect using:
+Your secure MQTT broker is now ready. Clients like **ESP32**, **Node-RED**, or `mosquitto_pub` / `mosquitto_sub` can connect using:
 
-Host: your PC's IP address
-
-Port: 1883
-
-Username: mqttuser
-
-Password: your chosen password
+* **Host**: your PC's IP address
+* **Port**: `1883`
+* **Username**: `mqttuser`
+* **Password**: *your chosen password*
