@@ -149,3 +149,27 @@ This node will **subscribe** to the topic published by the ESP32 device using th
 #### 📷 MQTT In Node Configuration
 
 <img src="Screenshots/MQTT_in_DHT.png" alt="MQTT In Node - DHT22 Sensor" width="600">
+
+
+
+
+---
+### 🧩 Installing the Node-RED Dashboard Palette
+
+To visualize sensor readings and implement control elements like buttons and gauges, install the **Node-RED Dashboard** nodes.
+
+These nodes allow you to create interactive web-based dashboards from your Node-RED flows.
+
+#### 🛠 Installation Steps:
+
+1. Open Node-RED in your browser (`http://localhost:1880`)
+2. Click the menu (☰) → **Manage palette**
+3. Go to the **Install** tab
+4. Search for: `dashboard`
+5. Find `node-red-dashboard` and click **Install**
+
+> 🔗 This package provides UI elements such as charts, gauges, switches, and text output blocks for building custom dashboards.
+
+#### 📷 Dashboard Palette Installation View
+
+<img src="Screenshots/Dashboard_Palette.png" alt="Install Node-RED Dashboard Palette" width="600">
