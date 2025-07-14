@@ -178,9 +178,6 @@ These nodes allow you to create interactive web-based dashboards from your Node-
 
 
 ---
-Here is the next `README.md` section describing the use of **Function nodes** to filter and extract individual fields—**timestamp (DT)**, **temperature (T)**, and **humidity (H)**—from the incoming MQTT JSON payload using Node-RED. Each function block has a corresponding screenshot (`Fn_DT.png`, `Fn_T.png`, `Fn_H.png`).
-
----
 
 
 ### 🧮 Extracting Sensor Values with Function Nodes
