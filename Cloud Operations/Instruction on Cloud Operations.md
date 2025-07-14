@@ -107,8 +107,7 @@ Set up your MQTT Broker using the following settings:
 
 - **Server**: `192.168.137.1`
 - **Port**: `1883`
-- **Protocol**: MQTT V3.1.1
-- **Authentication**: Add username and password under the `Security` tab
+- **Authentication**: I have initially added username as `mqttuser` and password as `1234` under the `Security` tab. You can set yours
 
 #### 📡 MQTT Broker Connection Settings
 
