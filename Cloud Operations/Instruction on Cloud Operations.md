@@ -110,4 +110,11 @@ Set up your MQTT Broker using the following settings:
 - **Protocol**: MQTT V3.1.1
 - **Authentication**: Add username and password under the `Security` tab
 
-<img src="Screenshots/Broker_Connection.png" alt="MQTT Broker Config in Node-RED" width="600">
+#### 📡 MQTT Broker Connection Settings
+
+<img src="Screenshots/Broker_Connection.png" alt="MQTT Broker Config in Node-RED - Connection Tab" width="300">
+
+#### 🔒 MQTT Broker Security Settings
+
+<img src="Screenshots/Broker_Security.png" alt="MQTT Broker Config in Node-RED - Security Tab" width="300">
+
