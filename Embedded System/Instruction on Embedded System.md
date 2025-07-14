@@ -16,7 +16,7 @@ Follow the instructions below to install the required board definitions and libr
 
 ### ✅ Board Setup: ESP32 by Espressif
 
-![ESP32 Boards Setup](esp32 by Espressif Systems.png)
+![ESP32 Boards Setup](Screenshots\esp32 by Espressif Systems.png)
 
 1. Open the **Boards Manager**.
 2. Search: `ESP 32`
@@ -30,9 +30,9 @@ Install the following libraries via the **Library Manager** (Ctrl + Shift + I):
 
 | Library | Screenshot |
 |--------|------------|
-| **PubSubClient by Nick O'Leary** – MQTT messaging | ![PubSubClient](PubSubClient by Nick.png) |
-| **DHT sensor library by Adafruit** – Temp & Humidity | ![DHT](DHT by Adafruit.png) |
-| **NTPClient by Fabrice Weinberg** – Time sync | ![NTPClient](NTPClient by Fabrice.png) |
+| **PubSubClient by Nick O'Leary** – MQTT messaging | ![PubSubClient](Screenshots\PubSubClient by Nick.png) |
+| **DHT sensor library by Adafruit** – Temp & Humidity | ![DHT](Screenshots\DHT by Adafruit.png) |
+| **NTPClient by Fabrice Weinberg** – Time sync | ![NTPClient](Screenshots\NTPClient by Fabrice.png) |
 
 ---
 
@@ -40,7 +40,7 @@ Install the following libraries via the **Library Manager** (Ctrl + Shift + I):
 
 Make sure your **FireBeetle 2 ESP32-E** is properly connected via USB.
 
-![Board Selection](Select Board and Port.png)
+![Board Selection](Screenshots\Select Board and Port.png)
 
 - **Board**: FireBeetle 2 ESP32-E  
 - **Port**: COM port as detected (e.g., `COM4`)
