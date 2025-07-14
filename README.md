@@ -1,5 +1,4 @@
 # Workshop on: Real-Time-Embedded-IoT-System
-# 🔧 Focusing : Real-Time Sensor Monitoring and Control with ESP32 & MQTT
 
 This repository provides all required materials to conduct a hands-on **Embedded Systems Workshop** using the **FireBeetle 2 ESP32-E**, MQTT, Node-RED, and cloud-based monitoring.
 
