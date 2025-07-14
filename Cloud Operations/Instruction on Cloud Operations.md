@@ -96,3 +96,18 @@ Example:
 * Topic: `Group.DHT` (subscribe)
 * Topic: `Group.LED` (publish)
 
+
+
+---
+---
+
+### 🔧 Configuring MQTT Broker in Node-RED
+
+Set up your MQTT Broker using the following settings:
+
+- **Server**: `192.168.137.1`
+- **Port**: `1883`
+- **Protocol**: MQTT V3.1.1
+- **Authentication**: Add username and password under the `Security` tab
+
+<img src="Screenshots/Broker_Connection.png" alt="MQTT Broker Config in Node-RED" width="600">
