@@ -16,7 +16,7 @@ Follow the instructions below to install the required board definitions and libr
 
 ### ✅ Board Setup: ESP32 by Espressif
 
-![ESP32 Boards Setup](Screenshots\esp32 by Espressif Systems.png)
+<img src="Screenshots/esp32.png" alt="ESP32 Boards Setup" width="500">
 
 1. Open the **Boards Manager**.
 2. Search: `ESP 32`
@@ -30,7 +30,7 @@ Install the following libraries via the **Library Manager** (Ctrl + Shift + I):
 
 | Library | Screenshot |
 |--------|------------|
-| **PubSubClient by Nick O'Leary** – MQTT messaging | ![PubSubClient](Screenshots\PubSubClient by Nick.png) |
+| **PubSubClient by Nick O'Leary** – MQTT messaging | <img src="PubSubClient by Nick.png" alt="PubSubClient" width="500"> |
 | **DHT sensor library by Adafruit** – Temp & Humidity | ![DHT](Screenshots\DHT by Adafruit.png) |
 | **NTPClient by Fabrice Weinberg** – Time sync | ![NTPClient](Screenshots\NTPClient by Fabrice.png) |
 
