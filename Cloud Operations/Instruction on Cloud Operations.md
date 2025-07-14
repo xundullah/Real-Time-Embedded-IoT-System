@@ -105,4 +105,4 @@ Set up your MQTT Broker using the following settings:
 - **Protocol**: MQTT V3.1.1
 - **Authentication**: Add username and password under the `Security` tab
 
-![MQTT Broker Config in Node-RED](Cloud Operations\Screenshots\Broker_Connection.png)
+![MQTT Broker Config in Node-RED](Screenshots\Broker_Connection.png)
