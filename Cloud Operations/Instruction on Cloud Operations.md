@@ -117,3 +117,35 @@ Set up your MQTT Broker using the following settings:
 
 <img src="Screenshots/Broker_Security.png" alt="MQTT Broker Config in Node-RED - Security Tab" width="600">
 
+
+
+
+---
+### 🌡️ Receiving Sensor Data via MQTT In Node
+
+To read real-time **Temperature and Humidity** data from the **DHT22 sensor** (connected to ESP32 FireBeetle), configure a **`mqtt in` node** in Node-RED.
+
+This node will **subscribe** to the topic published by the ESP32 device using the Mosquitto broker.
+
+
+#### 🛠 Configuration Details:
+
+- **Server**: `Mosquitto` (pre-configured in earlier steps)
+- **Action**: `Subscribe to single topic`
+- **Topic**: `Tutor.DHT`
+- **QoS**: `0` (default)
+- **Output**: `auto-detect (parsed JSON)`
+- **Name**: `Tutor.DHT`
+
+> 📌 This setup allows Node-RED to parse JSON data like:
+> ```json
+> {
+>   "DT": "2025-07-15 10:42:31",
+>   "T": 28.54,
+>   "H": 65.32
+> }
+> ```
+
+#### 📷 MQTT In Node Configuration
+
+<img src="Screenshots/MQTT_in_DHT.png" alt="MQTT In Node - DHT22 Sensor" width="450">
