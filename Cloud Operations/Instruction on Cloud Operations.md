@@ -374,3 +374,59 @@ You now have a complete real-time control and monitoring system using:
 - MQTT (Mosquitto)
 - ESP32 + DHT22
 - Node-RED dashboard
+
+
+
+---
+---
+
+
+## 🖥️ Final Node-RED Flow and Dashboard Output
+
+This section provides an overview of the complete working system — including the deployed flow and real-time dashboard.
+
+---
+
+### 🔄 Node-RED Flow Wiring
+
+This is the complete **Node-RED flow** combining MQTT subscription, function nodes, dashboard widgets, and MQTT output publishing:
+
+- `mqtt in` → Parses `Tutor.DHT`
+- Function nodes extract: `DT`, `T`, `H`
+- Dashboard widgets show real-time values
+- `ui_switch` triggers `mqtt out` to control the LED
+
+<img src="Screenshots/Node_Flow.jpg" alt="Node-RED Flow Structure" width="750">
+
+---
+
+### 📊 Live Dashboard View
+
+This is the deployed **Node-RED dashboard** showing all components working together:
+
+- Timestamp text
+- LED control switch
+- Temperature and humidity gauges and charts
+
+<img src="Screenshots/Dashboard.png" alt="Full Node-RED Dashboard View" width="750">
+
+---
+
+### 💡 LED ON State
+
+When the switch is toggled ON, the ESP32 receives `"On"` on topic `Tutor.LED`, and the onboard LED lights up.
+
+<img src="Screenshots/Dashboard_LED_ON.jpg" alt="Dashboard - LED ON State" width="750">
+
+---
+
+### 💡 LED OFF State
+
+When toggled OFF, the ESP32 receives `"Off"` and turns off the LED.
+
+<img src="Screenshots/Dashboard_LED_OFF.jpg" alt="Dashboard - LED OFF State" width="750">
+
+---
+
+> ✅ This confirms a fully functional pipeline:
+> ESP32 + DHT22 → MQTT Publish → Node-RED Processing → Dashboard Visualization → MQTT Control → ESP32 LED
