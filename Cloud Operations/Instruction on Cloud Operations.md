@@ -238,3 +238,89 @@ return msg;
 
 
 ---
+
+## 📊 Building a Real-Time Sensor Dashboard in Node-RED
+
+Once MQTT data is filtered using function nodes, you can visualize it on a web-based dashboard using **Node-RED Dashboard** widgets like `ui_text`, `ui_gauge`, and `ui_chart`.
+
+
+
+### 🕒 1. Display Timestamp with Text Node
+
+- **Widget**: `ui_text`
+- **Group**: `[Workshop] Timestamp`
+- **Label**: `Date-Time:`
+- **Value format**: `{{msg.payload}}`
+
+<img src="Screenshots/DT_txt.png" alt="Timestamp Display Node" width="500">
+
+
+
+### 🌡️ 2. Temperature Gauge
+
+- **Widget**: `ui_gauge`
+- **Group**: `[Workshop] Temperature`
+- **Type**: `Level`
+- **Units**: `°C`
+- **Range**: 0 to 40
+- **Value format**: `{{msg.payload}}`
+
+<img src="Screenshots/T_gauge.png" alt="Temperature Gauge Node" width="500">
+
+
+
+### 📈 3. Temperature Chart
+
+- **Widget**: `ui_chart`
+- **Group**: `[Workshop] Temperature`
+- **Type**: `Line chart`
+- **X-axis**: `last 1 hour`
+- **Y-axis Range**: 0 to 40
+
+<img src="Screenshots/T_chart.png" alt="Temperature Chart Node" width="500">
+
+
+
+### 💧 4. Humidity Gauge
+
+- **Widget**: `ui_gauge`
+- **Group**: `[Workshop] Humidity`
+- **Type**: `Level`
+- **Units**: `%`
+- **Range**: 0 to 100
+- **Value format**: `{{msg.payload}}`
+
+<img src="Screenshots/H_gauge.png" alt="Humidity Gauge Node" width="500">
+
+
+
+### 📉 5. Humidity Chart
+
+- **Widget**: `ui_chart`
+- **Group**: `[Workshop] Humidity`
+- **Type**: `Line chart`
+- **X-axis**: `last 1 hour`
+- **Y-axis Range**: 0 to 100
+
+<img src="Screenshots/H_chart.png" alt="Humidity Chart Node" width="500">
+
+
+
+### 🧭 6. Dashboard Grouping Structure
+
+To organize widgets visually, assign each widget to a **Group** under a **Tab** (e.g., `Workshop`). You can define:
+- Group Width
+- Display options (collapse, name visibility)
+
+📌 Example configuration:
+
+<img src="Screenshots/DT_T_H_LED_Grouping.png" alt="Dashboard Group Structure" width="600">
+
+
+
+> ✅ After deploying the flow, open your Node-RED dashboard in a browser:
+> ```
+> http://localhost:1880/ui
+> ```
+
+This dashboard will now live-update with real-time sensor values streamed from the ESP32 via MQTT!
